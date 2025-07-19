@@ -5,7 +5,7 @@ const AppContext = createContext();
 export const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const openSider = () => {
+  const openSidebar = () => {
     setIsSidebarOpen(true);
   };
 
@@ -14,7 +14,7 @@ export const AppProvider = ({ children }) => {
   };
 
   return (
-    <AppContext.Provider value={{ isSidebarOpen, openSider, closeSidebar }}>
+    <AppContext.Provider value={{ isSidebarOpen, openSidebar, closeSidebar }}>
       {children}
     </AppContext.Provider>
   );
